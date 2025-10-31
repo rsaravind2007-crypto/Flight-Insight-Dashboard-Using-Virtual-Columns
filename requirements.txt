@@ -1,5 +1,5 @@
 streamlit
 pandas
-mysql.connector
+mysql-connector-python
 LinearRegression
 numpy
