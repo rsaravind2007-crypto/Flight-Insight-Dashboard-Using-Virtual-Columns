@@ -1,6 +1,6 @@
 streamlit
 pandas
 mysql-connector-python
-LinearRegression
+plotly
+scikit-learn
 numpy
-plotly.express
