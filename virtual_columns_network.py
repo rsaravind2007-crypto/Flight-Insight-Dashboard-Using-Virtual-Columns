@@ -12,7 +12,7 @@ db_host = st.secrets["db_host"]
 db_port = int(st.secrets["db_port"])     
 
 
-def create_connection():
+def get_connection():
     try:
         conn = mysql.connector.connect(
             user=st.secrets["db_user"],
@@ -217,3 +217,4 @@ else:
     st.info("Upload a CSV to explore flight data.")
 
 st.caption("Developed by Aravind RS — Powered by MariaDB Virtual Columns ")
+
