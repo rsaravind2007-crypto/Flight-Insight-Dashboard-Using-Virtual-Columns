@@ -4,25 +4,25 @@
 
 ---
 
-## ✈️ Overview
+## Overview
 
 This project demonstrates how **MariaDB** can be used as a powerful analytical database for managing aviation route data.  
 It leverages **virtual columns** to calculate derived information such as flight duration(calculated using AI), distance categories, and eco scores without redundant data storage.
 
 ---
 
-## ⚙️ Features
+## Features
 
 - **Flight Routes Database**  
   Stores airline route data (source, destination, aircraft type, stops, etc.) in MariaDB.
 
-- **🧮 Virtual Columns**  
+- ** Virtual Columns**  
   Automatically calculates:
   - `distance_category`: Short / Medium / Long
   - `flight_duration`: AI-predicted duration (based on distance which is calculated using virtual columns)
   - `eco_score`: Efficiency score derived from flight distance
 
-- **🤖 AI Flight Duration Prediction**  
+- **🤖AI Flight Duration Prediction**  
   Uses a **Linear Regression Model** to estimate flight time from distance data.
 
 - **📈 Dashboard Analytics**  
@@ -43,3 +43,13 @@ y = df_model['flight_duration']
 
 # Train the model
 model.fit(X, y)
+
+#To prevent missing data issues:
+
+df = df.dropna(subset=['distance_km'])
+
+#To calculate Eco Score:
+
+df['eco_score'] = df['distance_km'].apply(
+    lambda x: 5 if x < 1000 else 3 if x < 5000 else 1
+)
