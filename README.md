@@ -78,7 +78,7 @@ df['eco_score'] = df['distance_km'].apply(
 - Deploy the Streamlit app via Streamlit Cloud for online access. 
 ---
 ### I have deployed the project using SkySQL’s free tier. The website is currently working fine as of October 31, 2025, but I am not certain whether it will remain active during the evaluation period.
-### website link : 
+### website link : https://flight-insight-dashboard-using-virtual-columns-aqrfshgtxgxi4tf.streamlit.app/
 
 ## Author
 
