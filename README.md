@@ -1,6 +1,6 @@
 # Flight Insight Dashboard
 
-**Flight Insight Dashboard** is a data-driven web application that visualizes airline routes, predicts flight durations using AI, and evaluates environmental impact scores (Eco Score) based on distance (distance calculated using virtual columns) and aircraft efficiency.
+**Flight Insight Dashboard** is a data-driven web application that visualizes airline routes, predicts flight durations using AI, and evaluates environmental impact scores (Eco Score) based on distance and aircraft efficiency.
 
 ---
 
@@ -19,7 +19,7 @@ It leverages **virtual columns** to calculate derived information such as flight
 - ** Virtual Columns**  
   Automatically calculates:
   - `distance_category`: Short / Medium / Long
-  - `flight_duration`: AI-predicted duration (based on distance which is calculated using virtual columns)
+  - `flight_duration`: AI-predicted duration (based on distance must be present in csv file we are uploading or manually set the distance as openflight's route table doesnt have this by default)
   - `eco_score`: Efficiency score derived from flight distance
 
 - **🤖AI Flight Duration Prediction**  
