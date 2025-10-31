@@ -19,7 +19,7 @@ It leverages **virtual columns** to calculate derived information such as flight
 - ** Virtual Columns**  
   Automatically calculates:
   - `distance_category`: Short / Medium / Long
-  - `flight_duration`: AI-predicted duration (based on distance must be present in csv file we are uploading or manually set the distance as openflight's route table doesnt have this by default)
+  - `flight_duration`: AI-predicted duration (based on distance and it must be present in csv file we are uploading or manually set the distance as openflight's route table doesnt have this by default)
   - `eco_score`: Efficiency score derived from flight distance
 
 - **🤖AI Flight Duration Prediction**  
